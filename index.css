@@ -1,0 +1,93 @@
+body {
+    padding: 0;
+    margin: 0;
+    background-color: hsl(204, 43%, 93%);
+    font-family:sans-serif;
+    /* min-height: 90vh; */
+}
+main{
+    min-height: 100vh;
+}
+.gridcontainer {
+    width: 48%;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.insidecontainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 1000px;     
+}
+.insidecontainer .child1 {
+    grid-column: 1/-1;
+    background-color: white;
+    padding: 2rem;
+}
+.child1 h2 {
+    color: hsl(179, 62%, 43%);
+}
+.child1 h3 {
+    color: hsl(71, 73%, 54%);
+}
+
+.child1 p {
+    color: hsl(218, 22%, 67%);
+}
+#divid, #divid2 {
+    padding: 2rem;
+    color: white;
+}
+#divid {
+    background-color: hsl(179, 62%, 43%);
+}
+#divid2 {
+    background-color: hsla(179, 62%, 43%, 0.8);
+}
+#divid span {
+    font-size: 2rem;
+    font-weight: bold;
+}
+.ptag {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+.gridcol ul {
+    padding-left: 0;
+}
+.gridcol ul li {
+    list-style-type: none;
+    padding: 0.3rem 0;
+}
+#divid button {
+    width: 100%;
+    margin-top: 1rem;
+    padding: 1rem;
+    background-color: hsl(71, 73%, 54%);
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+#divid button:hover {
+    background-color: hsl(71, 73%, 48%);
+}
+footer{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+@media screen and (max-width: 768px) {
+    .insidecontainer {
+        grid-template-columns: 1fr;
+    }
+}
